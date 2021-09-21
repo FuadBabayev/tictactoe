@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/32f99d7a89.js" crossorigin="anonymous"></script>
+    <title>Tic-Tac_Toe</title>
+</head>
+<body>
+<h1 id="ad" style="color: lime; text-align: center;"></h1>
+<i class="fas fa-times" style="color: red; font-size: 50px;"></i>
+<i class="fas fa-circle-notch" style="font-size: 44px;"></i>
+<table border="1" cellpadding="40px" id="table" cellspacing="0" align="center"></table>
+<div id="show"></div>
+
+<script>
+    alert("Welcome to Tic-Tac-Toe ");
+let name1 = prompt("GAMER 1: Adiniz daxil edin ");
+name2 = prompt("GAMER 2: Adiniz daxil edin ");
+document.getElementById("ad").innerHTML = "Gamer 1: " + name1 + `<br>` + "Gamer 2: " + name2;
+
+let table = "";       
+for(let  i = 0; i < 3; i++){
+table += `<tr>`;
+for(let j = 0; j < 3; j++){
+table += `<td>${i} ${j}</td>`;
+}
+table += `</tr>`;
+}
+document.getElementById("table").innerHTML = table;
+
+
+document.querySelector("#table").addEventListener("click" , function(parametr){
+document.querySelector("#table").style.backgroundColor = `rgb(${parametr.clientX}, ${parametr.clientY}, ${(parametr.clientX + parametr.clientY)/124})`;
+document.querySelector("#table").textContent = `parametr.clientX.value`;
+});
+</script>
+</body>
+</html>
